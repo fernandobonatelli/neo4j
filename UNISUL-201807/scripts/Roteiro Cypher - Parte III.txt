@@ -104,14 +104,14 @@ MATCH (n:Person {name:"Emely"})
      ,(m:Person {name:"Ivan"})
 WITH n, m
 MATCH sp = allshortestpaths((n)-[:friend_of*]-(m))
-RETURN LENGTH(SP)
+RETURN LENGTH(sp)
 OU
-RETURN NODES(SP)
+RETURN NODES(sp)
 OU
-RETURN RELATIONSHIPS(SP)
+RETURN RELATIONSHIPS(sp)
 
 //[35] Nó inicial e final de um relacionamento
-MATCH (n:Person {name:"Frank"})-[r:friend_of]->(m)
+MATCH (n:Person {name:"Frank"})-[r:friend_of]-(m)
 RETURN STARTNODE(r)
 ou
 RETURN ENDNODE(r)

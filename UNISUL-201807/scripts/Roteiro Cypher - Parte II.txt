@@ -96,7 +96,7 @@ RETURN
  ,proposed.orientation   AS proposed_orientation
  ,COUNT(behavior)        AS behavior_count
  ,COLLECT(behavior.name) AS behavior_list
-ORDER BY behavior_count DESC
+ORDER BY behavior_count DESC, proposed
 
 //[16] Mais atributos novamente
 MATCH
